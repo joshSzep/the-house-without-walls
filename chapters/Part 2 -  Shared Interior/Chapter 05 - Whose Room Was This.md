@@ -326,7 +326,7 @@ Rafi saw something in her face and did not soften the truth to make it kinder.
 
 Nadia looked down at the sketches again, at the converging lines, the repeated turn of the stairs, the kitchen table claimed and unclaimed by more than one life.
 
-Part I had let her ask whether the house was happening.
+Until now, Nadia had been able to ask whether the house was happening.
 
 That question was over.
 

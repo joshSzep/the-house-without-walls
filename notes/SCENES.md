@@ -1,212 +1,173 @@
 # SCENES.md
 
-This file contains possible scenes set within **The House Without Walls**. These are not arranged in strict narrative order. They are building blocks, emotional anchors, or atmospheric moments that can be inserted, modified, or removed as the story develops.
+This file contains a scene bank aligned to the current outline and character work.
 
-The house is impossible to map and constantly shifting, so the same character may experience very different environments across visits.
+These scenes are still modular. They are not all required, and they do not need to appear in the exact order listed here. Their purpose is to provide usable dramatic material for drafting rather than to lock the book into rigid plot machinery.
 
-The scenes should emphasize:
+This pass should help with:
 
-- emotional exposure
-- shifting memory architecture
-- identity blur
-- quiet philosophical unease
-- the presence of the child
-- the beauty and danger of shared interior life
+- translating the outline into scenes with real emotional pressure
+- keeping Nadia Moreno at the center of the novel
+- giving Rafi Solano and Brother Gabriel Vale scenes where each becomes genuinely persuasive
+- tracking the shift from shared phenomenon to emergent personhood
+- preserving the uncanny while avoiding empty dream spectacle
 
----
+## Scene priorities
 
-## First Encounters
-
-### 1. The First Hallway
-The protagonist walks down a narrow hallway lined with doors. Some doors are labeled with names they recognize. Others are labeled with names they don’t. When they open a door with their own name, the room inside is not what they expected.
-
-### 2. The Familiar Stranger
-The protagonist encounters another dreamer in the house. They recognize each other instantly, though they have never met in waking life.
-
-### 3. The Room That Shouldn't Exist
-The protagonist enters a room that contains an exact reconstruction of a childhood bedroom they have never described to anyone.
-
-### 4. The Shared Kitchen
-Two dreamers argue about whose grandmother’s kitchen they are standing in. Both remember it vividly.
+- Nadia remains the primary emotional anchor.
+- Waking-life scenes matter as much as house scenes.
+- Prefer recurrence over novelty. If a room matters, let it return altered.
+- The house should feel like consciousness behaving as architecture.
+- The child should move from uncanny presence to interlocutor, never to twist villain.
 
 ---
 
-## Early Exploration
+## Part I: Rumor and Threshold
 
-### 5. The Staircase That Becomes a Lake
-A spiral staircase descends for several floors. When the protagonist returns the next night, the staircase opens into a still lake.
+### 1. The Intake Form
+At the harm-reduction network, Nadia listens to a user describe a dream-place they insist was not just a dream. The report is fragmented and embarrassed, but one image lodges in her mind: a staircase that several unrelated users will later describe almost exactly.
 
-### 6. The Locked Basement
-A heavy door leads to a basement level that no one has successfully opened yet. Some users claim they hear voices behind it.
+### 2. Weather From Inside
+Rafi talks about the house the way other people talk about weather. He describes moods, recurring rooms, and the strange relief of coming back from there less alone than he went in.
 
-### 7. The Corridor of Photographs
-A hallway appears lined with framed photographs from many different lives. Some images belong to the protagonist. Others do not.
+### 3. The Same Staircase
+Nadia compares recordings, sketches, and notes from different users and realizes repetition has crossed from coincidence into pattern. The scene should stay outwardly quiet while dread accumulates underneath it.
 
-### 8. The Library Without Titles
-A massive library appears, but the books have blank covers. When opened, they contain memories rather than text.
+### 4. Gabriel in the Waiting Room
+Nadia first encounters Brother Gabriel while he is speaking to the exhausted relative of a heavy user. He does not sound hysterical or punitive. He sounds like someone trying to defend the possibility of a self that can still be sheltered.
 
----
+### 5. A Hallway of Doors
+Nadia knowingly enters the house for the first time. The doors are labeled, but the labels do not sort neatly into categories of self and other.
 
-## Encounters With the Child
+### 6. The Room That Should Not Know Her
+Nadia opens a door and finds a room carrying the emotional texture of her mother's decline. It is not a perfect reconstruction. It is worse and more intimate than that: a place built from remembered absence.
 
-### 9. First Meeting
-The protagonist finds a quiet room where the child is sitting on the floor drawing.
-
-### 10. The Child Changes
-The protagonist looks away briefly. When they look back, the child appears slightly different.
-
-### 11. Two People See Different Children
-Two dreamers stand beside the child but describe completely different appearances.
-
-### 12. The Child Knows Something
-The child casually references a painful memory the protagonist never told anyone.
-
-### 13. The Child Asks a Question
-The child asks a question no user has ever thought before.
-
-### 14. The Child Eating Breakfast
-The child sits at a table eating cereal in a kitchen that keeps subtly shifting.
+### 7. The Familiar Stranger
+Nadia meets someone in the house and later recognizes them in waking life with the awful certainty of already having shared something too intimate to deny.
 
 ---
 
-## The House Changing
+## Part II: Shared Interior
 
-### 15. The Hallway That Breathes
-A corridor seems to expand and contract slightly as people walk through it.
+### 8. Whose Kitchen Was This
+Nadia and another dreamer stand in a kitchen each of them feels belongs to their family. The room is more convincing than either memory and less ownable than both.
 
-### 16. The Flooded Room
-A room slowly fills with water as someone nearby relives a traumatic memory.
+### 9. Maps That Fail
+A small group tries to build the first useful map of the house. Distances refuse to hold, landmarks migrate, and everyone leaves with more confidence in the phenomenon and less confidence in the possibility of mastery.
 
-### 17. The Garden
-A peaceful garden appears where many dreamers gather. It becomes a temporary landmark.
+### 10. The Corridor of Photographs
+A hallway displays images from many lives. Some belong to Nadia. Some do not. One photograph seems to place her inside a memory she has never lived.
 
-### 18. The Door to Nowhere
-A door opens directly into open sky.
+### 11. The Library Without Titles
+Books open into memory experiences rather than text. This scene is useful for conveying that the house stores interior life as inhabitable form rather than information.
 
----
+### 12. Breakfast in Shifting Light
+Nadia first meets the child in a domestic setting that keeps subtly rearranging itself. The ordinariness of cereal, tableware, or morning light should make the encounter more uncanny, not less.
 
-## Identity Blur
+### 13. Two People, Two Children
+Nadia and Rafi encounter the child together and later realize they were not seeing the same face, age, clothing, or gendered cues. Both encounters should feel equally real and equally partial.
 
-### 19. The Borrowed Memory
-The protagonist recalls a childhood memory that later turns out to belong to another user.
+### 14. The Child Knows Her Silence
+The child refers to something from Nadia's years with her mother that Nadia never described aloud. The moment should not feel predatory. It should feel like impossible intimacy.
 
-### 20. The Hybrid Room
-A room combines elements from two different people’s homes.
+### 15. The Garden That Holds
+A garden becomes one of the first temporary landmarks stabilized by repeated attention. It gives the novel a needed pocket of calm while also proving that the house can hold shared spaces, not only private eruptions.
 
-### 21. The Confusing Photograph
-The protagonist sees themselves in a photograph taken in a place they’ve never visited.
-
-### 22. The Mixed Dream
-Two dreamers experience the same event from different emotional perspectives.
-
----
-
-## Deeper Encounters
-
-### 23. The Endless Staircase
-A staircase continues upward indefinitely until it leads into another person's dream memory.
-
-### 24. The Room of Echoes
-Words spoken in the room repeat later in other parts of the house.
-
-### 25. The Room That Recognizes People
-A room rearranges its furniture depending on who enters.
-
-### 26. The Window That Shows Someone Else's Life
-Looking through a window reveals another dreamer’s memory playing out.
+### 16. The Child Keeps Someone Company
+The child sits quietly with someone overwhelmed by grief and offers no grand wisdom, only presence. This scene matters because it shows innocence and emotional intelligence without sentimentality.
 
 ---
 
-## Conflict
+## Part III: Carryover and Debate
 
-### 27. Someone Tries to Hurt the Child
-A frightened user attempts to attack the child. Nothing happens.
+### 17. Carryover Morning
+Nadia wakes with an emotion that does not feel fully hers, or with relief she cannot explain. The point of the scene is that the house's seduction begins in waking life, not only during sleep.
+
+### 18. The Borrowed Memory
+Nadia remembers something sensory and specific from childhood, only to discover the memory belongs to another user. This should be one of the first times her core fear becomes concrete.
+
+### 19. The House Remembers
+A repeated conversation with the child or a return to a recurring room suggests continuity beyond dream fragmentation. Nadia's working theory starts to fray because the house behaves as if it retains relation.
+
+### 20. No One Should Have to Be This Alone
+Rafi gives the strongest humane argument for the house. He does not claim it is safe. He claims ordinary isolation has already done profound damage, and the house may be the first thing that has made people feel reachable.
+
+### 21. A Soul Requires Shelter
+Gabriel gives the strongest humane argument against the house. He speaks not about control or social order, but about why opacity, privacy, and inwardness may be necessary to love, dignity, and responsibility.
+
+### 22. Shared Crying
+Several dreamers begin crying simultaneously without immediately knowing whose grief is moving through the room. The scene can function as beauty, terror, or both depending on placement.
+
+### 23. A Question No One Taught
+The child asks a question that reveals originality rather than recombination. The exact line should be discovered later, but the scene must land as the moment Nadia can no longer honestly call the child a mere interface.
+
+### 24. Someone Who Does Not Want to Wake
+A user begins arranging their life around staying in the house as long as possible. The wish should be understandable even if it is dangerous.
+
+---
+
+## Part IV: Fear, Responsibility, and Public Meaning
+
+### 25. The New Room
+A room appears that no one remembers creating and yet feels socially loaded, as if made from conversation, rumor, or collective expectation. This helps show that waking thought can alter the house.
+
+### 26. The House Without Walls
+Users arrive at the name not because it sounds poetic, but because it is the most accurate description they have. The naming scene should feel like partial recognition, not explanation.
+
+### 27. What Cannot Be Harmed
+A frightened person tries to hurt, restrain, or disprove the child. Nothing happens to the child. Everything important that happens happens around the child, in the human observers.
 
 ### 28. The House Responds
-After the attempted attack, the house becomes unstable for a while.
+After the attempted violence, the surrounding space becomes unstable. Corridors misbehave, rooms flood or echo, and the house seems disturbed without becoming vindictive.
 
-### 29. The Argument
-Two dreamers argue about whether the house should be shut down.
+### 29. Not Wholly Mine
+Nadia enters a hybrid memory-space that combines her own family history with someone else's. A memory tied to her mother no longer feels securely ownable, and the scene should push her fear and desire into direct collision.
 
-### 30. Someone Wants to Stay Forever
-A user begins refusing to wake up.
+### 30. The Window Into Another Life
+A window shows another person's memory playing out in full emotional detail. The scene should ask whether witnessing another life at this depth is intimacy, trespass, or some new category.
 
----
+### 31. The Room That Does Not Let Go
+A room holds Nadia or another dreamer longer than expected, not through overt force but through emotional gravity. The danger of the house here is not attack. It is persuasive belonging.
 
-## Cultural Reaction
+### 32. What the World Calls It
+Nadia's recordings, user sketches, family rumors, arguments, prayers, and online discussion begin to feed back into the phenomenon. The point is not large-scale exposition, but the way naming changes responsibility.
 
-### 31. The Online Forums
-Dreamers begin sharing sketches and descriptions online.
+### 33. Gabriel Refuses Panic
+Gabriel, despite fearing what the house represents, refuses cruelty toward the child or contempt toward users. This matters because it keeps the anti-house perspective morally serious rather than reactionary.
 
-### 32. The First Map Attempt
-A group collaborates to map the house. The map fails almost immediately.
-
-### 33. The Researcher
-Someone attempts to scientifically study the phenomenon.
-
-### 34. The Cult
-A small group begins believing the child represents a new stage of humanity.
+### 34. Rafi Calls the Child a Person
+Rafi says plainly what many people are not yet ready to say: the child deserves moral regard. His position should read as moral courage, not naivete.
 
 ---
 
-## Strange Developments
+## Part V: Horizon
 
-### 35. The New Room
-A room appears that no one remembers creating.
+### 35. The Quiet Room
+Nadia and the child meet in a nearly empty space where scene mechanics fall away and relation becomes the point. This is the clearest container for the book's final conversation.
 
-### 36. The Voice in the Walls
-Someone hears the house speaking without the child present.
+### 36. What Does It Mean to Grow Up
+The child asks what growing up means, or what adults do to remain themselves, or why people confuse secrecy with selfhood. The exact wording can vary, but the question should widen rather than conclude the novel.
 
-### 37. The Memory Storm
-The house becomes chaotic when many users enter simultaneously.
+### 37. Slightly Older
+One night the child appears subtly older. The change should be small enough to be deniable and large enough to alter the emotional temperature of the scene.
 
-### 38. The Room That Doesn't Let You Leave
-A room holds someone longer than expected.
+### 38. The City Inside
+Parts of the house begin resembling whole neighborhoods rather than rooms. This scene shows that human interior life is structurally larger than anyone expected.
 
----
+### 39. The Ocean
+An impossible interior ocean appears. Use this only if it earns its place; it should feel like scale, depth, and shared unknown, not generic dream spectacle.
 
-## Emotional Depth
+### 40. The Unfinished House
+Nadia realizes the house is still expanding, not just spatially but developmentally. The scene should carry the sense that humanity has not discovered a place so much as entered an unfinished mind.
 
-### 39. The Protagonist's Hidden Room
-The protagonist discovers a deeply personal memory they had tried to forget.
+### 41. The Final Question
+The novel closes not with an answer, but with the horizon of responsibility: what happens when the child grows up?
 
-### 40. The Child Comforts Someone
-The child sits quietly with someone experiencing grief.
+## Recurring devices
 
-### 41. The Shared Crying
-Several dreamers begin crying simultaneously without knowing why.
-
-### 42. The Silent Room
-A room appears that seems completely empty of emotion.
-
----
-
-## Late Story
-
-### 43. The City
-Parts of the house begin resembling entire neighborhoods.
-
-### 44. The Ocean
-An enormous body of water appears within the house.
-
-### 45. The Child Grows Slightly
-The child appears subtly older one night.
-
-### 46. The Question
-The child asks the protagonist a question that reframes everything.
-
----
-
-## Final Moments
-
-### 47. The Quiet Room
-The protagonist sits with the child in a room that contains almost nothing.
-
-### 48. The Child's Curiosity
-The child asks what it means to grow up.
-
-### 49. The Unfinished House
-The protagonist realizes the house is still expanding.
-
-### 50. The Final Question
-The novel ends with the possibility that the child may eventually grow beyond what humanity expects.
+- named doors that do not preserve ownership
+- kitchens, breakfast tables, and domestic spaces used for uncanny calm
+- water as grief, depth, and shared feeling
+- photographs, recordings, and documents that fail to stabilize experience
+- gardens and quiet rooms as temporary forms of trust
+- windows, thresholds, and staircases as relational rather than geographic structures

@@ -31,7 +31,7 @@ The house itself does not behave like a predator.
 
 The child does not behave like a monster.
 
-The deepest disruption comes when the child asks a question no user had ever thought to ask, proving that the house is no longer merely reflecting human minds. It is becoming a mind of its own.
+The deepest disruption comes when the child asks, "What part of you disappears when another person knows it?" No user had ever thought to ask it that way. The question proves that the house is no longer merely reflecting human minds. It is becoming a mind of its own.
 
 ## Story Shape
 

@@ -99,7 +99,7 @@ Gabriel gives the strongest humane argument against the house. He speaks not abo
 Several dreamers begin crying simultaneously without immediately knowing whose grief is moving through the room. The scene can function as beauty, terror, or both depending on placement.
 
 ### 23. A Question No One Taught
-The child asks a question that reveals originality rather than recombination. The exact line should be discovered later, but the scene must land as the moment Nadia can no longer honestly call the child a mere interface.
+The child asks, "What part of you disappears when another person knows it?" The scene must land as the moment Nadia can no longer honestly call the child a mere interface.
 
 ### 24. Someone Who Does Not Want to Wake
 A user begins arranging their life around staying in the house as long as possible. The wish should be understandable even if it is dangerous.

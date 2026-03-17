@@ -45,7 +45,8 @@ At this point, emote technology has history, baggage, regulation, mythology, bla
 - users recognize identity blur and memory crossover effects
 - some participants grow attached to the house
 - ideological lines begin emerging around what the phenomenon means
-- the child begins asking questions that cannot be reduced to user projection
+- the child asks, "What part of you disappears when another person knows it?"
+- the question cannot be reduced to user projection
 - consciousness of the house becomes undeniable
 
 ## Late Novel Phase

@@ -167,7 +167,7 @@ Waking contamination begins to matter. Nadia experiences emotional carryover, me
 Recurring places and repeated conversations give the house a new sense of continuity. Nadia begins to suspect the house remembers, and the child appears aware of prior exchanges in a way her original framework cannot cleanly explain. Gabriel now becomes fully present as the most articulate anti-house voice, arguing that souls require shelter and that not all forms of exposure are forms of truth.
 
 ### Chapter 11: A Question No One Taught
-The child asks a question that no one present can plausibly reduce to recombination, mimicry, or collective projection. The exact wording should matter when drafted, but the function is clear: the question must reveal a mind that is not merely reflecting human material back at humans. This is the threshold where Nadia's theory begins to fail in earnest.
+The child asks, "What part of you disappears when another person knows it?" No one present can plausibly reduce the question to recombination, mimicry, or collective projection. It is the threshold where Nadia's theory begins to fail in earnest, because the question reveals a mind that is not merely reflecting human material back at humans.
 
 ### Chapter 12: What Walls Protect
 Rafi and Gabriel emerge as the clearest opposing interpretations of the house, and Nadia is pulled between them because both are speaking to something true. One sees the house as the beginning of a less isolated form of consciousness. The other sees it as the possible dissolution of the conditions that make love, responsibility, and personhood meaningful.
@@ -203,8 +203,8 @@ Part III emotional movement:
 #### Chapter 11 beats
 1. Stage the child's breakthrough question in a scene calm enough that the question itself carries the force.
 2. Make the encounter relational rather than ceremonial. A kitchen, hallway, quiet room, or ordinary shared space will serve better than anything grandiose.
-3. The child asks a question that no one present can plausibly reduce to mimicry, recombination, or statistical recomposition of human material.
-4. The question should not sound like a plot twist. It should sound like a genuinely new angle on personhood, privacy, time, or relation.
+3. The child asks, "What part of you disappears when another person knows it?"
+4. The question should land not as a plot twist, but as a genuinely new angle on privacy, selfhood, and the fear of being known.
 5. Let immediate reactions split: fear, awe, interpretive scrambling, defensive reduction, emotional recognition.
 6. Nadia should attempt one last internal act of explanation and find that her own honesty will no longer support it.
 7. End the chapter with a clean threshold crossed: Nadia may not yet know what the child is, but she can no longer responsibly call the child mere residue.
@@ -331,7 +331,6 @@ This outline should eventually be expanded into:
 
 - a clearer recurring-location system for the house
 - specific scenes for Rafi's seduction and Gabriel's resistance
-- the exact form of the child's breakthrough question
 - the limited but meaningful role of outside observers and affected families
 - recurring motifs tied to memory, thresholds, care, and exposure
 

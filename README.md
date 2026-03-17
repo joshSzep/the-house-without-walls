@@ -4,8 +4,9 @@
 
 **The House Without Walls** is a philosophical science fiction novel set in the same universe as:
 
-- *What It Feels Like to Be You*
-- *What It Feels Like to Be Us*
+- *What It Feels Like to Be You* - [Website](https://what-it-feels-like-to-be-you.joshszep.com)
+- *Only I Can Feel Me* - [Website](https://only-i-can-feel-me.joshszep.com)
+- *What It Feels Like to Be Us* - [Website](https://what-it-feels-like-to-be-us.joshszep.com)
 
 This story takes place approximately **15 years after the events of _What It Feels Like to Be Us_**, and approximately **30 years after the events of _What It Feels Like to Be You_**.
 

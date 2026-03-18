@@ -268,7 +268,7 @@ The third thing the map taught them was what Rafi had been trying to say from th
 
 They were relevant.
 
-The same narrow door off the garden opened for Nadia once into the kitchen, once into a short corridor that returned her to the staircase, and once into a room full of stacked cardboard archive boxes she had never seen before. For Martin it opened into a low-ceilinged workroom with unfinished drywall and the smell of machine oil. He described a toolbox in enough detail to make his own face go blank in the middle of the debrief, then refused to discuss it further. Jae got only darkness and the sensation of somebody just ahead of him waiting at the far end of it. Pilar, on the only night she tried that door, found herself back in the kitchen with the oranges gone and a damp ring on the table where the bowl had been.
+The same narrow side door off the garden opened for Nadia once into the kitchen, once into a short corridor that returned her to the staircase, and once into a room full of stacked cardboard archive boxes she had never seen before. For Martin it opened into a low-ceilinged workroom with unfinished drywall and the smell of machine oil. He described a toolbox in enough detail to make his own face go blank in the middle of the debrief, then refused to discuss it further. Jae got only darkness and the sensation of somebody just ahead of him waiting at the far end of it. Pilar, on the only night she tried that door, found herself back in the kitchen with the oranges gone and a damp ring on the table where the bowl had been.
 
 "So that's useless," Martin said when the reports were spread out in front of them.
 
@@ -510,7 +510,7 @@ She stood in the center of it and let herself feel, for a single dangerous secon
 
 Then she saw the door.
 
-The map in her head said wall on the far side of the bench.
+The map in her head said plaster on the far side of the bench.
 
 Tonight a narrow metal service door stood there, open the width of a hand. Cold came through it.
 

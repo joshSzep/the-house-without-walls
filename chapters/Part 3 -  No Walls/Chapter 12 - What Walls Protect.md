@@ -80,6 +80,8 @@ The sentence landed on Elena like another injury.
 
 Before Nadia could answer, the door opened and Brother Gabriel Vale stepped in carrying a paper bag that smelled faintly of bread and grocery-store oranges.
 
+Elena had clearly called him too, which did not surprise Nadia once she thought about it. Fear reached first for whoever had last managed to speak to Mateo like a person instead of a warning.
+
 He took in the room in a glance: Mateo on the exam table, Elena braced at the counter, Nadia in the visitor chair.
 
 "I brought food," he said. "None of you look pleased enough to have eaten." 
@@ -93,6 +95,8 @@ Gabriel set the bag on the counter and began taking things out with the practica
 Gabriel nodded once. "Eat before you explain yourself into collapse." 
 
 That, Nadia thought, was why even frightened people kept liking him.
+
+Nadia had texted Rafi from the clinic hallway while Elena was checking Mateo in, because there were some sentences he would only hear in their full human shape if he was present for the room.
 
 Fifteen minutes later Rafi arrived with a takeout bag and a bottle of electrolyte mix he held up with no visible embarrassment.
 
@@ -166,7 +170,7 @@ Because some part of her had been waiting years to hear it from somebody who sou
 
 Rafi was not defending recklessness. He was defending the fact that isolation had already been exacting its price long before the house arrived to complicate the ledger.
 
-"A woman came into the network yesterday," Nadia heard herself say, before realizing she was strengthening his case. "She said the apartment stopped feeling like evidence against her for two hours after waking." 
+"A woman came into the network earlier this week," Nadia heard herself say, before realizing she was strengthening his case. "She said the apartment stopped feeling like evidence against her for two hours after waking." 
 
 Rafi looked at her only briefly. He did not make anything of the fact that she had volunteered it.
 

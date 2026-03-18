@@ -8,7 +8,9 @@ The room had taken their worry literally.
 
 Nadia stopped in the doorway with the now-familiar pressure of seeing the house respond not to one person's memory, but to the shapes people made around fear when they wanted to call it preparation.
 
-Rafi was already there by the coat rack, one hand in his jacket pocket, looking less surprised than grim. Pilar sat at the table with both palms flat against the wood as if testing whether it would keep holding. Jae stood by the water cooler without touching it, the posture of a person trying to avoid startling his own body. Martin had placed himself beside the door with such disciplined casualness that the effort showed all over him.
+They had not planned to meet there that night. If the house had listened to the afternoon's argument and extended five simultaneous invitations, no one present seemed eager to say so.
+
+Rafi was already there by the coat rack, one hand in his jacket pocket, looking less surprised than grim. Pilar sat at the table with both palms flat against the wood as if testing whether it would keep holding. Jae stood by the water cooler without touching it, the posture of a person trying to avoid startling his own body. Martin had placed himself beside the door with such disciplined casualness that the effort showed all over him, as if he still wanted the option of claiming he had not agreed to be there.
 
 The child was on the floor beneath the bulletin board, cross-legged among a scatter of index cards.
 

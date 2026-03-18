@@ -8,7 +8,7 @@ Not artwork. Not even proper documentation most of the time. Pencil on the back 
 
 The supply closet could no longer hold the paper drift neatly. Nadia started stacking the new drawings in a banker box on top of the safer-use pamphlets because putting them in ordinary case files had begun to feel false. They were no longer only adjuncts to distress. They were part of the thing itself.
 
-By Tuesday Mara from intake stood over the box with both hands on her hips and said, "You need a heading."
+By the following Tuesday Mara from intake stood over the box with both hands on her hips and said, "You need a heading."
 
 Nadia kept sorting without looking up. "I have headings."
 
@@ -58,7 +58,9 @@ Each time she typed it, the phrase held less.
 
 At 11:20 Elena came in without calling first.
 
-She was still wearing her pharmacy vest under an open coat, damp at the shoulders from the rain, and carried the forward-tilted posture of somebody who had not decided whether the visit counted as consultation, accusation, or triage. Nadia saw her through the glass panel before the receptionist pointed her back.
+Nadia had not called in days. She had told herself Elena needed room, that Mateo belonged first to family and clinic and only then to anybody trying to understand the house. The reasons felt thinner the moment she saw Elena through the glass panel and the receptionist pointed her back.
+
+She was still wearing her pharmacy vest under an open coat, damp at the shoulders from the rain, and carried the forward-tilted posture of somebody who had not decided whether the visit counted as consultation, accusation, or triage.
 
 "You're not in trouble," Nadia said once the office door closed behind them.
 

@@ -1,6 +1,6 @@
 # Chapter 13: A House That Learns
 
-The garden had begun anticipating her.
+Over the next several days, the garden had begun anticipating her.
 
 Nadia knew how impossible that sounded and knew, by now, that impossibility was not the useful threshold anymore. The tile underfoot did not literally shift into welcome. No light flared. No voice announced her. The change was subtler and therefore harder to dismiss. The route from wherever the house took her now seemed to arrive at the garden by the shortest available sequence, as if the house had learned not only that she could be reached there but that she expected to be.
 

@@ -781,12 +781,13 @@ EOF
     </main>
 
     <footer class="footer">
-      <p class="footer-copy">The House Without Walls is published at <a href="https://the-house-without-walls.joshszep.com">the-house-without-walls.joshszep.com</a> with source available on <a href="https://github.com/joshSzep/the-house-without-walls">GitHub</a>.</p>
+      <p class="footer-copy">The House Without Walls is published at <a href="https://the-house-without-walls.joshszep.com">the-house-without-walls.joshszep.com</a> with source available on <a href="https://github.com/joshSzep/the-house-without-walls">GitHub</a>. More books are listed at <a href="https://joshszep.com">joshszep.com</a>.</p>
       <div class="footer-links">
         <a href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">PDF</a>
         <a href="The%20House%20Without%20Walls.epub" download="The House Without Walls.epub">EPUB</a>
         <a href="#excerpt">Excerpt</a>
         <a href="https://github.com/joshSzep/the-house-without-walls">Source</a>
+        <a href="https://joshszep.com">All books</a>
       </div>
     </footer>
   </div>

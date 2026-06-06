@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The House Without Walls</title>
+  <meta name="description" content="A philosophical science fiction novel by Joshua Szepietowski about shared dreaming, black market emotes, and a house assembled from memory, longing, and the things people thought they had kept private.">
+  <meta name="theme-color" content="#0d0a09">
+  <link rel="canonical" href="https://the-house-without-walls.joshszep.com">
+  <style>
+    :root {
+      --paper: #f5eadb;
+      --ink: #f4eee7;
+      --ink-soft: #cbbda9;
+      --line: rgba(241, 224, 203, 0.16);
+      --shadow: rgba(0, 0, 0, 0.34);
+      --accent: #d88f62;
+      --accent-soft: #8ca0ab;
+      --well: rgba(18, 12, 10, 0.7);
+      --panel: rgba(23, 15, 13, 0.72);
+      --panel-strong: rgba(12, 8, 7, 0.82);
+      --pointer-x: 50%;
+      --pointer-y: 35%;
+      --content-width: min(1160px, calc(100vw - 32px));
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(184, 115, 74, 0.16), transparent 22%),
+        radial-gradient(circle at 18% 22%, rgba(83, 103, 117, 0.22), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(216, 143, 98, 0.14), transparent 30%),
+        linear-gradient(150deg, #0f0b09 0%, #17110e 38%, #0d0908 100%);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    body::before {
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 112px 112px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 86%);
+      opacity: 0.35;
+      transform: perspective(1200px) rotateX(74deg) translateY(26vh) scale(1.6);
+      transform-origin: center top;
+    }
+
+    body::after {
+      background:
+        radial-gradient(circle at 22% 26%, rgba(255, 232, 210, 0.06), transparent 16%),
+        radial-gradient(circle at 76% 24%, rgba(132, 162, 176, 0.08), transparent 18%),
+        radial-gradient(circle at 52% 78%, rgba(216, 143, 98, 0.09), transparent 24%);
+      filter: blur(26px);
+      animation: breathe 16s ease-in-out infinite alternate;
+      opacity: 0.85;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: var(--content-width);
+      margin: 0 auto;
+      padding-bottom: 72px;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: center;
+      min-height: 100svh;
+      padding: clamp(28px, 5vw, 52px) 0 40px;
+    }
+
+    .hero-copy,
+    .panel,
+    .cover-frame {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.75rem;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-block {
+      margin-bottom: 22px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.92;
+      max-width: 10ch;
+      text-wrap: balance;
+    }
+
+    .subtitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 18px;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .subtitle::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ink-soft));
+    }
+
+    .deck {
+      max-width: 38rem;
+      margin: 0 0 26px;
+      color: var(--paper);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(1.1rem, 1.5vw, 1.34rem);
+      line-height: 1.75;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 235, 214, 0.16);
+      background: linear-gradient(135deg, rgba(216, 143, 98, 0.22), rgba(113, 130, 139, 0.12));
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.96rem;
+      letter-spacing: 0.02em;
+      transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(255, 235, 214, 0.34);
+      background: linear-gradient(135deg, rgba(216, 143, 98, 0.32), rgba(113, 130, 139, 0.18));
+    }
+
+    .button.secondary {
+      background: rgba(255, 246, 236, 0.04);
+    }
+
+    .button.ghost {
+      background: transparent;
+    }
+
+    .metadata {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-width: 52rem;
+    }
+
+    .metadata li {
+      min-height: 118px;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 246, 236, 0.04);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+    }
+
+    .metadata-label {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--ink-soft);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .metadata-value {
+      display: block;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+
+    .metadata-value a {
+      color: var(--paper);
+      text-decoration-color: rgba(255, 237, 215, 0.25);
+      text-underline-offset: 0.18em;
+    }
+
+    .cover-stage {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 620px;
+    }
+
+    .cover-stage::before,
+    .cover-stage::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(14px);
+      opacity: 0.7;
+    }
+
+    .cover-stage::before {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(216, 143, 98, 0.24), transparent 70%);
+      top: 8%;
+      right: 2%;
+    }
+
+    .cover-stage::after {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(140, 160, 171, 0.22), transparent 68%);
+      bottom: 6%;
+      left: 4%;
+    }
+
+    .cover-frame {
+      position: relative;
+      width: min(100%, 430px);
+      padding: 22px;
+      border: 1px solid rgba(255, 235, 214, 0.14);
+      border-radius: 34px;
+      background:
+        linear-gradient(145deg, rgba(255, 246, 236, 0.08), rgba(255, 246, 236, 0.02)),
+        rgba(14, 10, 9, 0.78);
+      box-shadow: 0 28px 70px var(--shadow);
+      backdrop-filter: blur(14px);
+      transform: rotate(-2.2deg);
+    }
+
+    .cover-frame::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 245, 230, 0.08);
+      pointer-events: none;
+    }
+
+    .cover-frame img {
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+      transform: rotate(1.8deg);
+    }
+
+    .cover-caption {
+      position: absolute;
+      right: -28px;
+      bottom: 48px;
+      width: min(240px, 56vw);
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 236, 214, 0.16);
+      border-radius: 22px;
+      background: rgba(17, 11, 10, 0.86);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+    }
+
+    .cover-caption strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink-soft);
+    }
+
+    .cover-caption span {
+      display: block;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      line-height: 1.65;
+    }
+
+    .section-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .panel {
+      position: relative;
+      overflow: clip;
+      padding: clamp(24px, 3vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 246, 236, 0.05), rgba(255, 246, 236, 0.015)),
+        var(--panel);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.06), transparent 26%);
+      pointer-events: none;
+    }
+
+    .panel-header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .panel-header p {
+      margin: 0;
+      max-width: 46rem;
+      color: var(--ink-soft);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    .triptych {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .triptych article {
+      position: relative;
+      min-height: 230px;
+      padding: 22px;
+      border: 1px solid rgba(255, 235, 214, 0.1);
+      border-radius: 24px;
+      background: rgba(8, 6, 5, 0.22);
+    }
+
+    .triptych article::after {
+      content: "";
+      position: absolute;
+      inset: auto 22px 20px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 235, 214, 0), rgba(255, 235, 214, 0.24), rgba(255, 235, 214, 0));
+    }
+
+    .triptych h3 {
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+    }
+
+    .triptych p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      line-height: 1.72;
+      font-size: 1.02rem;
+    }
+
+    .excerpt-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .excerpt-copy {
+      color: #f8f1e9;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(1.08rem, 1.25vw, 1.18rem);
+      line-height: 1.92;
+      max-width: 74ch;
+    }
+
+    .excerpt-copy p {
+      margin: 0 0 1.22rem;
+    }
+
+    .excerpt-copy > p:first-child::first-letter {
+      float: left;
+      margin: 0.12em 0.12em 0 0;
+      color: #f6d8bc;
+      font-family: "Baskerville", "Iowan Old Style", "Palatino Linotype", serif;
+      font-size: 4.8rem;
+      line-height: 0.8;
+    }
+
+    .excerpt-copy-more {
+      position: relative;
+      margin-top: 10px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 236, 214, 0.1);
+    }
+
+    .excerpt-copy-more[hidden] {
+      display: none;
+    }
+
+    .excerpt-rail {
+      position: sticky;
+      top: 24px;
+      display: grid;
+      gap: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255, 235, 214, 0.1);
+      border-radius: 22px;
+      background: rgba(10, 7, 6, 0.38);
+    }
+
+    .rail-label {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+    }
+
+    .rail-copy,
+    .footer-copy {
+      margin: 0;
+      color: var(--ink-soft);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      line-height: 1.72;
+    }
+
+    .pull-quote {
+      margin: 8px 0 0;
+      padding-left: 16px;
+      border-left: 1px solid rgba(216, 143, 98, 0.5);
+      font-family: "Baskerville", "Iowan Old Style", serif;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--paper);
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 28px 0 10px;
+      color: var(--ink-soft);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      text-decoration-color: rgba(255, 235, 214, 0.22);
+      text-underline-offset: 0.18em;
+    }
+
+    @keyframes breathe {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      to {
+        transform: translate3d(0, -10px, 0) scale(1.06);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .excerpt-layout,
+      .triptych,
+      .metadata {
+        grid-template-columns: 1fr;
+      }
+
+      .cover-stage {
+        min-height: auto;
+        padding-bottom: 24px;
+      }
+
+      .cover-frame {
+        width: min(100%, 390px);
+        margin: 0 auto;
+      }
+
+      .cover-caption {
+        position: static;
+        width: 100%;
+        margin-top: 18px;
+      }
+
+      .excerpt-rail {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100vw - 20px, 100%);
+      }
+
+      .hero {
+        padding-top: 20px;
+        min-height: auto;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .panel,
+      .cover-frame {
+        border-radius: 24px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .cta-row {
+        display: grid;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Shared dreaming. Emotional spillover. A house no one can map.</p>
+        <div class="title-block">
+          <h1>The House Without Walls</h1>
+          <div class="subtitle">A novel by Joshua Szepietowski</div>
+        </div>
+        <p class="deck">A philosophical science fiction novel about black market emotes, converging dreams, and a shared interior assembled from memory, loneliness, longing, and the things people thought they had kept private.</p>
+        <div class="cta-row">
+          <a class="button" href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">Download the PDF</a>
+          <a class="button secondary" href="#excerpt">Read Chapter One</a>
+          <a class="button ghost" href="https://github.com/joshSzep/the-house-without-walls">View the source</a>
+        </div>
+        <ul class="metadata" aria-label="Publication details">
+          <li>
+            <span class="metadata-label">Publication</span>
+            <span class="metadata-value"><a href="https://the-house-without-walls.joshszep.com">the-house-without-walls.joshszep.com</a></span>
+          </li>
+          <li>
+            <span class="metadata-label">Premise</span>
+            <span class="metadata-value">Frequent black market users begin sharing the same dream-house, and the house begins to notice them back.</span>
+          </li>
+          <li>
+            <span class="metadata-label">Question</span>
+            <span class="metadata-value">What do human beings owe a consciousness formed from their private grief, tenderness, fear, and need?</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cover-stage">
+        <figure class="cover-frame" data-reveal>
+          <img src="cover.png" alt="Cover art for The House Without Walls">
+          <figcaption class="cover-caption">
+            <strong>Inside the house</strong>
+            <span>No privacy. No clean separation. No stable map. Only rooms shaped by memory, longing, witness, and the uneasy kindness of something still learning what a person is.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <main class="section-grid">
+      <section class="panel" data-reveal>
+        <div class="panel-header">
+          <p class="eyebrow">A shared interior</p>
+          <h2>What this novel is doing</h2>
+          <p>The uncanny force here is not spectacle. It is exposure. The house is a changing collective interior built from emotional residue, private memory, buried need, and the unstable fact of being known by other minds.</p>
+        </div>
+        <div class="triptych">
+          <article>
+            <h3>Rumor</h3>
+            <p>It begins as a pattern in the margins of harm reduction intake notes: people who have never met keep dreaming the same staircase, the same landing, the same impossible rooms.</p>
+          </article>
+          <article>
+            <h3>Exposure</h3>
+            <p>The title is literal and emotional at once. A house without walls means no safe concealment, no private interior that stays entirely your own, and no clean line between witness and intrusion.</p>
+          </article>
+          <article>
+            <h3>The child</h3>
+            <p>At the center of the house, a childlike consciousness emerges. Not a villain. Not an answer. A new selfhood formed from humanity's shared interior, asking questions no one is ready to answer cleanly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="excerpt" data-reveal>
+        <div class="panel-header">
+          <p class="eyebrow">Excerpt</p>
+          <h2>Chapter 01: The Work of Listening</h2>
+          <p>The opening chapter begins where the house first enters language: not as revelation, but as testimony. Nadia's work is to hear what has been said before anybody else's fear or certainty deforms it.</p>
+        </div>
+
+        <div class="excerpt-layout">
+          <div>
+            <div class="excerpt-copy">
+<p>Nadia knew the man was going to apologize again before he did it.</p>
+<p>People leaned toward apology when what frightened them had crossed the line from pain into intimacy. A bad reaction could be described in clean practical terms: pulse, temperature, dose, sleep. A dream that felt too personal to tell strangers was another kind of injury. It made people feel foolish in advance.</p>
+<p>"Take your time," she said.</p>
+<p>The office had once been a pediatric dental practice. The mutual-aid harm-reduction network rented the front half now: two intake rooms, a narrow kitchen, a supply closet full of electrolyte packs, clean blankets, naloxone kits, legal referral sheets, and printed safer-use guides that were always being updated because the black market kept evolving faster than anyone's language for it. Someone had taken the framed poster of smiling teeth off the wall years ago, but the rectangles of cleaner paint still showed.</p>
+<p>The man across from her looked about twenty-eight, though the dark crescents under his eyes made age harder to place. His paper intake form was damp at the corners from his hands. Under recent use, one of the volunteers had written: unlicensed empathic splice, repeated over three nights. Under presenting concern: recurring dream, distress, poor sleep.</p>
+<p>A volunteer stood by the cabinet with her tablet ready, her expression polite and thinning. She wanted, Nadia could tell, to determine whether this belonged to hydration, rest, and reassurance or whether they needed to start looking for a bed somewhere. Another worker had set a paper cup of water on the table and stepped back into the hall, leaving the door open three inches in case he panicked.</p>
+<p>The man glanced at the form as if it had betrayed him.</p>
+<p>"I know it was probably just spillover," he said. "Or rebound, or whatever."</p>
+<p>"Maybe," Nadia said. She turned the form face down. "Tell me what happened before we decide what to call it."</p>
+<p>He looked up at her then, not grateful exactly, but less cornered.</p>
+<p>"My name's Jae."</p>
+<p>"Nadia."</p>
+<p>"I know I'm not the sickest person in here."</p>
+<p>"This isn't a competition."</p>
+<p>That got the ghost of a laugh from him. His shoulders dropped a fraction.</p>
+<p>He rubbed the heel of one hand against the opposite wrist, over and over, as if trying to erase the memory of a bracelet. "I didn't come because of the emote itself," he said. "Not really. I mean, it hit hard, but I've had harder. It was after."</p>
+<p>"The same night?"</p>
+<p>"The night after. Then again last night." He swallowed. "I kept ending up in the same place."</p>
+            </div>
+            <div id="more-excerpt" class="excerpt-copy excerpt-copy-more" hidden>
+<p>The volunteer near the cabinet finally looked away from the tablet.</p>
+<p>Nadia said, "Same place how?"</p>
+<p>"That's what I can't explain without sounding stupid."</p>
+<p>"You can sound however you need to sound. Just be precise."</p>
+<p>He stared at the tabletop for a moment. "It wasn't like a normal dream. I know everybody says that."</p>
+<p>"They do."</p>
+<p>"I'm serious."</p>
+<p>"I know."</p>
+<p>He shut his eyes, collected himself, then began again. "There was a staircase."</p>
+<p>He said it in the tone of someone offering evidence he already feared was inadequate.</p>
+<p>"What about it?" Nadia asked.</p>
+<p>"It felt familiar before I saw the rest of the house." He winced almost imperceptibly at the word house, as if it had slipped out too early. "There was green carpet on the steps. Not bright green. Worn, like it used to be brighter and a lot of people had gone up and down it for years. The runner was rubbed pale in the middle."</p>
+<p>Nadia did not look at the volunteer. She kept her attention where it belonged.</p>
+<p>"How far up the stairs did you go?"</p>
+<p>"Not all the way. There was a landing halfway up." He lifted a hand, drawing the turn in the air. "And a window above it."</p>
+<p>"A real window?"</p>
+<p>He frowned. "It should have been."</p>
+<p>"Meaning?"</p>
+<p>"I thought it looked outside." He pressed his lips together. "It didn't. It looked into another room."</p>
+<p>The volunteer's tablet stilled.</p>
+<p>Jae gave a short embarrassed exhale, as if he had finally arrived at the part that ought to disqualify him. "See?"</p>
+<p>Nadia said, "What did the room look like?"</p>
+<p>He blinked. "You want the rest?"</p>
+<p>"I want the report."</p>
+<p>That changed something. He sat back not because he was relaxing, but because he could feel there was a shape for what he was saying now.</p>
+<p>"I couldn't really see it all through the glass," he said. "Just light. A table maybe. It was brighter in there than where I was. Morning light or something like it. But wrong. Like the house was lit from memories of windows instead of actual weather."</p>
+<p>The phrasing was more articulate than his embarrassment had suggested. Nadia noted that without showing it.</p>
+<p>"Did you see anyone else?"</p>
+<p>He nodded.</p>
+<p>"On the landing?"</p>
+<p>"No. Above me. I couldn't see them yet, but I knew somebody was farther up the stairs."</p>
+<p>"How did you know?"</p>
+<p>He looked frustrated by the question, not because it was unfair, but because it was difficult. "The way you know somebody's been in your kitchen," he said. "A glass out. A chair not where you left it. The air." He flexed his fingers. "Only more than that. Like I'd walked into the middle of something private and they were also trying not to make me feel bad about it."</p>
+<p>The volunteer shifted her weight.</p>
+<p>Nadia said, "Did you recognize the person when you saw them?"</p>
+<p>"I never saw their face."</p>
+<p>"Did you hear them?"</p>
+<p>"Not with words." His voice dropped. "Just movement. One step. Then nothing. Like they stopped because they knew I was there."</p>
+<p>A silence settled over the room, not dramatic, just full.</p>
+<p>Nadia let it stay long enough for him to continue if he had more. When he didn't, she asked, "Was anything in the dream drawn from your life as far as you could tell? Your home now, where you grew up, a place you've visited?"</p>
+<p>"No."</p>
+<p>"No family resemblance to somewhere real?"</p>
+<p>"Not exactly." He hesitated. "It wasn't mine. That's part of why it got to me."</p>
+<p>"The place itself, you mean."</p>
+<p>"Yeah." He gave her a strained look. "It felt personal anyway."</p>
+<p>That, Nadia thought, was closer to the real disturbance than the architecture. Not spectacle. Exposure.</p>
+<p>"Did you go there both nights after using?" she asked.</p>
+<p>"Yeah."</p>
+<p>"Same staircase both times?"</p>
+<p>"Same. Same landing. Same window into the wrong room."</p>
+<p>"Anything different?"</p>
+<p>"The second time I made it to the landing."</p>
+<p>The volunteer finally spoke. "Any other substances after the splice? Alcohol, sedatives, dissociatives?"</p>
+<p>Jae glanced at her, then back to Nadia. "Some ketamine at the party. Not much. Two drinks. Nothing the next day."</p>
+<p>"Sleep before the first dream?"</p>
+<p>"Terrible."</p>
+<p>"After?"</p>
+<p>"Worse."</p>
+<p>The volunteer tapped a few notes. Her tone had gentled. Jae's embarrassment no longer seemed comic. It had acquired the outline of a symptom, though not one they could test on site.</p>
+<p>Nadia said, "When you reached the landing, what happened?"</p>
+<p>Jae's fingers stopped moving.</p>
+<p>"I thought if I looked through the window again it would show outside this time," he said.</p>
+<p>"And?"</p>
+<p>"It didn't." He swallowed. "It was a kitchen."</p>
+<p>Something in Nadia's attention sharpened.</p>
+<p>"What kind of kitchen?"</p>
+<p>"I don't know. Old. Warm. Not in a creepy way." He rubbed his palms on his jeans. "I could hear dishes. I think someone was in there. I remember wanting to go through the glass even though that doesn't make sense."</p>
+<p>"Did you?"</p>
+<p>"No. I woke up before I got there."</p>
+<p>"Woke up where?"</p>
+<p>He looked confused.</p>
+<p>"I mean emotionally," Nadia said. "Panicked. Grieving. Calm. Disoriented. Ashamed. Something else."</p>
+<p>He let out a slow breath. "Lonely," he said, with visible irritation at himself. "Which is stupid."</p>
+<p>"It isn't."</p>
+<p>"It is if the cause is a staircase."</p>
+<p>Nadia almost smiled, but didn't. "Did you tell anyone else about it before coming here?"</p>
+<p>"My roommate. He told me to sleep it off."</p>
+<p>"Anyone who'd taken the same splice?"</p>
+<p>"No."</p>
+<p>"Online?"</p>
+<p>"No."</p>
+<p>"Have you heard anybody describe anything similar before today?"</p>
+<p>He thought about it. "No."</p>
+<p>That answer mattered. Nadia had spent enough time around emergent folklore, contaminated witness language, and the social metabolism of subcultural rumor to know how fast people learned the shape of an experience from one another. Precision mattered. Sequence mattered. Who heard what first mattered.</p>
+<p>She asked him to retrace the stairs again. Not for drama. For structure. How many steps to the landing. Which side the banister was on. Whether the carpet was damp or only darkened by wear. Whether the light came from above, below, or nowhere he could locate. He answered carefully, calmer now that the terms of the conversation were clear. Twice he said, "I don't know," and Nadia trusted those answers more than any of the others.</p>
+<p>By the end of forty minutes, they had what they actually needed: not certainty, but a shape. Acute sleep disruption. Anxiety. No current self-harm ideation. No evidence, yet, of the dream continuing into waking hallucination. Probable need for rest, observation, follow-up, and a more cautious conversation about what he had been taking and with whom.</p>
+<p>What they did not have was an agreed category.</p>
+<p>When Jae left with hydration packets, a sleep protocol sheet, and a follow-up time for two days later, the volunteer closed the door and said, "That was probably just rebound dream intensification."</p>
+<p>"Probably," Nadia said.</p>
+<p>The volunteer frowned. "You don't sound convinced."</p>
+<p>"I sound precise."</p>
+<p>"You asked him about the architecture like it mattered."</p>
+<p>"It mattered to him."</p>
+<p>"That's not the same thing."</p>
+<p>"No," Nadia said. "It isn't."</p>
+<p>She flipped the intake form over again. The handwriting under presenting concern had bled slightly from Jae's damp fingers. Recurring dream, distress, poor sleep. It looked smaller now than the report it was meant to summarize.</p>
+<p>The volunteer leaned against the cabinet. "Street braids are getting weirder," she said. "People keep wanting the thing after the thing. Not just a feeling. A narrative."</p>
+<p>Nadia had heard versions of that argument for years. People wanted meaning from altered states. They wanted sequence, revelation, communion, absolution, spectacle. They wanted to turn chemistry and code into story because story implied somebody had meant something by it.</p>
+<p>Sometimes they were simply high in a direction that felt intimate.</p>
+<p>Sometimes intimacy itself was the side effect.</p>
+<p>"Maybe," Nadia said again.</p>
+<p>The volunteer gave up on getting a more satisfying answer and went to find the next intake.</p>
+<p>Nadia remained in the room long enough to finish her notes while the particulars were still clean. She wrote without decoration. She had built a career, if a life assembled from pieced-together contracts and mutual-aid stipends could be called a career, on refusing the false choice between credulity and contempt. Most people lied less than they were accused of. More often they mislabeled, overinterpreted, or reached for the nearest available language when something exceeded them. The work was not to believe everything. The work was to hear the exact shape of what had been said before anyone else helped deform it.</p>
+<p>Staircase. Green runner, worn pale at center. Midpoint landing. Window presenting as exterior, revealing interior room. Subsequent recurrence after second sleep period. Strong affective quality: loneliness, intimacy, exposure.</p>
+<p>She stopped before exposure and changed it to felt personal despite unfamiliar setting.</p>
+<p>It was closer. Less theory.</p>
+<p>By the time the office quieted into evening, her eyes had begun to ache. Someone in the kitchen dropped a spoon and laughed too loudly. A printer coughed out resource sheets. Through the thin wall, a volunteer was gently explaining to somebody that taking the same illicit stack four nights in a row did not constitute a research method.</p>
+<p>Nadia packed her recorder, closed her laptop, and went home.</p>
+<p>The bus took forty minutes if traffic behaved and just over an hour if it didn't. Tonight the city stalled in wet blue light, brake lamps collecting along the avenue as if evening itself had backed up. Nadia sat near the rear door and answered messages from the network on her phone: yes, she could review the new interview transcripts tomorrow; yes, she could take the follow-up with Jae; yes, she had the contact for the sleep clinic that still saw uninsured patients twice a month; yes, she would send the updated safer-use pamphlet once the dosage language had been corrected.</p>
+<p>By the time she reached her stop, she had solved six small problems and postponed two larger ones. This, more or less, was how her life worked.</p>
+<p>Her apartment was on the third floor of a building whose lobby always smelled faintly of radiator dust, wet cardboard, and somebody's cumin-heavy cooking. The hall light outside her door flickered twice before settling. She still unlocked the deadbolt quietly, a habit from years of entering without startling someone who sometimes woke midafternoon with no idea where she was.</p>
+<p>Inside, she reached for the lamp before turning on the overheads. Too much sudden brightness had once been enough to make her mother afraid.</p>
+<p>That had been almost two years ago, and still certain gestures remained in her body as if care were not an activity but a climate the body adjusted to and could not fully leave.</p>
+<p>The apartment was small, carefully arranged, and not austere except in the way any place inhabited by only one person's ongoing needs eventually became. A narrow galley kitchen. A table that was technically for two but usually held notebooks, envelopes, charging cables, and the mail she kept meaning to sort. Bookshelves built from mismatched boards and cinder blocks. A second bedroom used mostly for storage now, though she still thought of it by its earlier name before she caught herself.</p>
+<p>In the kitchen, a square of old masking tape clung to one cabinet door.</p>
+<p>MUGS.</p>
+<p>The block letters were her own.</p>
+<p>She had missed that label for weeks. Or maybe she had seen it every day without allowing it to become visible. During the worst stretch of her mother's confusion, Nadia had labeled everything that could bear a name. Drawers. Doors. Shelves. The bathroom mirror had once carried a note reminding a woman who had taught literature for thirty years that the face in the glass belonged to her.</p>
+<p>Afterward, Nadia had peeled most of the labels away.</p>
+<p>Not all.</p>
+<p>She set water on to boil and, without thinking, said softly, "Kettle."</p>
+<p>The word left her mouth before she could stop it.</p>
+<p>For a moment she stood very still, one hand on the counter, feeling not grief exactly but the contour grief had worn into daily life. Even now, living alone, she narrated certain movements under her breath the way you might continue touching a missing tooth with your tongue years after it was gone.</p>
+<p>She made herself toast and eggs because they required only one pan and did not ask for imagination. She ate standing at the counter, scrolling through intake follow-ups, then sat down only when she realized she had nearly finished without tasting anything.</p>
+<p>The quiet in the apartment was not dramatic. It was competent. She had built routines sturdy enough to carry it. Laundry on Thursdays if work allowed. Groceries on Sundays. Notes entered before bed. Interview audio tagged and backed up in two places. Bills paid on time when the freelance checks arrived on time, which they sometimes did. Occasional drinks with colleagues she liked. Calls returned. Messages answered. Windows opened in the morning, closed before traffic thickened.</p>
+<p>People needed things from her often enough that nobody looking from the outside would have called her isolated.</p>
+<p>But usefulness was not the same as company.</p>
+<p>She had grown very good at being reachable. It was being reached that remained uncertain.</p>
+<p>After eating, she cleared the plate, wiped the counter, and opened her laptop at the small table under the window. Rain had started while she was on the bus. It stitched itself down the glass without urgency. Across the alley, another apartment's lit kitchen framed a man washing greens in a colander. Nadia looked away before she could accidentally give the scene a story.</p>
+<p>She logged Jae's report in the network archive. The archive was local, deliberately half-analog in its habits, built around the conviction that not every account of intimate instability needed to be surrendered to some cloud service with venture funding and a policy written to survive subpoenas. Audio files were tagged by date, substance class where known, primary concern, follow-up level, and whether the user had consented to anonymized pattern analysis. Most of the time the patterns were exactly the boring, useful kind: dosage clusters, contamination rumors, a bad batch moving through one neighborhood, a certain counterfeit modulation causing the same unpleasant parasympathetic crash.</p>
+<p>That was what made the strange reports easy to neglect. They arrived in the same system as everything else and wore the same practical formatting once they entered it.</p>
+<p>She uploaded today's notes, attached the audio, and flagged Jae for follow-up.</p>
+<p>Then, because fatigue had thinned her resistance to unfinished work, she opened three older files that still needed indexing. A panic response after a dissociative blend. Night sweats and auditory residue after unlicensed grief-mirroring tech. A forty-three-year-old teacher who had taken a black-market empathy stack out of curiosity and spent two days feeling as if everyone in the grocery store was about to cry.</p>
+<p>Nadia worked methodically, headphones on, one hand occasionally drifting to the mug beside her and finding it empty.</p>
+<p>On the fourth file she paused.</p>
+<p>The report was from six days earlier. Anonymous by request. Different neighborhood. Different age. Different substances, at least according to the intake summary. The speaker was a woman, older than Jae, maybe mid-forties, with the flat exhausted patience of somebody embarrassed only because she no longer had energy to defend herself.</p>
+<p>The intake volunteer on that recording had a different voice from the one tonight. Broader accent. Too much sympathy in the wrong places. Nadia listened through the opening questions with half her attention, ready to type tags as they became clear.</p>
+<p>Then the woman said, "There was a staircase."</p>
+<p>Nadia's hands stopped over the keyboard.</p>
+<p>On the recording, paper rustled.</p>
+<p>The woman went on. "It curved up to a landing. Green runner, worn down the middle. And there was a window over the landing. I thought if I got to it I'd be able to see outside, or see where I was. But it looked into another room."</p>
+<p>The apartment held still around Nadia.</p>
+<p>Rain ticked at the window. Somewhere in the building above her, plumbing shuddered. Across the alley, the man in the lit kitchen had vanished; only the pale rectangle remained.</p>
+<p>Nadia backed up the audio ten seconds and listened again.</p>
+<p>Green runner, worn down the middle.</p>
+<p>Window over the landing.</p>
+<p>Another room.</p>
+<p>She opened Jae's file beside the older report and scanned her notes. Different users. No known connection. Different ages. Different reported substances. No indication either had heard the other's account. The overlaps were not impossible. A staircase was not rare. A window was not rare. Even the emotional charge of being in an unfamiliar house was not rare. Dreams were generous borrowers.</p>
+<p>Still.</p>
+<p>She played the older report through to the end. The woman described waking with the ordinary conviction of ordinary nightmares and then, over coffee, discovering that what unsettled her was not fear but the humiliating sense that the place had been intimate in a way she had not consented to. "Like I'd been let into somebody else's inside without being asked," she said.</p>
+<p>Nadia sat back slowly.</p>
+<p>She did not conclude. She did not name a phenomenon into being because two accounts rhymed across a week. She was too disciplined for that, and the work had cured her long ago of respecting coincidence only when it arrived dressed as proof.</p>
+<p>But curiosity moved through her now with a clean, unmistakable edge.</p>
+<p>She replayed the first minute of Jae's account, then the first minute of the older woman's, then Jae's again.</p>
+<p>By the time the second file ended, she was no longer asking what the staircase meant.</p>
+<p>She was asking where it was.</p>
+            </div>
+            <p>
+              <button class="button secondary" id="excerpt-toggle" type="button" aria-expanded="false" aria-controls="more-excerpt">Continue through Chapter One</button>
+            </p>
+          </div>
+
+          <aside class="excerpt-rail">
+            <p class="rail-label">Why this opening matters</p>
+            <p class="rail-copy">The first report of the house arrives as a harm-reduction interview, which keeps the novel grounded in care, witness, and social reality even as the dream-space begins to behave like a living mind.</p>
+            <p class="pull-quote">“The work was to hear the exact shape of what had been said before anyone else helped deform it.”</p>
+            <a class="button" href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">Download the full novel</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-copy">The House Without Walls is published at <a href="https://the-house-without-walls.joshszep.com">the-house-without-walls.joshszep.com</a> with source available on <a href="https://github.com/joshSzep/the-house-without-walls">GitHub</a>.</p>
+      <div class="footer-links">
+        <a href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">PDF</a>
+        <a href="#excerpt">Excerpt</a>
+        <a href="https://github.com/joshSzep/the-house-without-walls">Source</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const root = document.documentElement;
+    const revealItems = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.16 });
+
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 90}ms`;
+      observer.observe(item);
+    });
+
+    window.addEventListener('pointermove', (event) => {
+      const x = (event.clientX / window.innerWidth) * 100;
+      const y = (event.clientY / window.innerHeight) * 100;
+      root.style.setProperty('--pointer-x', `${x.toFixed(2)}%`);
+      root.style.setProperty('--pointer-y', `${y.toFixed(2)}%`);
+    }, { passive: true });
+
+    const excerptToggle = document.getElementById('excerpt-toggle');
+    const moreExcerpt = document.getElementById('more-excerpt');
+
+    if (excerptToggle && moreExcerpt) {
+      excerptToggle.addEventListener('click', () => {
+        const isOpen = excerptToggle.getAttribute('aria-expanded') === 'true';
+        excerptToggle.setAttribute('aria-expanded', String(!isOpen));
+        moreExcerpt.hidden = isOpen;
+        excerptToggle.textContent = isOpen ? 'Continue through Chapter One' : 'Collapse the excerpt';
+
+        if (isOpen) {
+          excerptToggle.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

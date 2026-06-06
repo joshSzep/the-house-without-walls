@@ -5,13 +5,16 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 PDF_SCRIPT="${SCRIPT_DIR}/create-pdf.sh"
+EPUB_SCRIPT="${SCRIPT_DIR}/create-epub.sh"
 CHAPTER_FILE="${REPO_ROOT}/chapters/Part 1 -  Rumors of a Place/Chapter 01 - The Work of Listening.md"
 COVER_SOURCE="${REPO_ROOT}/cover.png"
 PDF_SOURCE="${REPO_ROOT}/The House Without Walls.pdf"
+EPUB_SOURCE="${REPO_ROOT}/The House Without Walls.epub"
 WEBSITE_DIR="${REPO_ROOT}/website"
 INDEX_FILE="${WEBSITE_DIR}/index.html"
 WEBSITE_COVER="${WEBSITE_DIR}/cover.png"
 WEBSITE_PDF="${WEBSITE_DIR}/The House Without Walls.pdf"
+WEBSITE_EPUB="${WEBSITE_DIR}/The House Without Walls.epub"
 
 require_file() {
   local file_path="$1"
@@ -682,6 +685,7 @@ write_index() {
         <p class="deck">A philosophical science fiction novel about black market emotes, converging dreams, and a shared interior assembled from memory, loneliness, longing, and the things people thought they had kept private.</p>
         <div class="cta-row">
           <a class="button" href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">Download the PDF</a>
+          <a class="button secondary" href="The%20House%20Without%20Walls.epub" download="The House Without Walls.epub">Download the EPUB</a>
           <a class="button secondary" href="#excerpt">Read Chapter One</a>
           <a class="button ghost" href="https://github.com/joshSzep/the-house-without-walls">View the source</a>
         </div>
@@ -770,6 +774,7 @@ EOF
             <p class="rail-copy">The first report of the house arrives as a harm-reduction interview, which keeps the novel grounded in care, witness, and social reality even as the dream-space begins to behave like a living mind.</p>
             <p class="pull-quote">“The work was to hear the exact shape of what had been said before anyone else helped deform it.”</p>
             <a class="button" href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">Download the full novel</a>
+            <a class="button secondary" href="The%20House%20Without%20Walls.epub" download="The House Without Walls.epub">Send to an e-reader</a>
           </aside>
         </div>
       </section>
@@ -779,6 +784,7 @@ EOF
       <p class="footer-copy">The House Without Walls is published at <a href="https://the-house-without-walls.joshszep.com">the-house-without-walls.joshszep.com</a> with source available on <a href="https://github.com/joshSzep/the-house-without-walls">GitHub</a>.</p>
       <div class="footer-links">
         <a href="The%20House%20Without%20Walls.pdf" download="The House Without Walls.pdf">PDF</a>
+        <a href="The%20House%20Without%20Walls.epub" download="The House Without Walls.epub">EPUB</a>
         <a href="#excerpt">Excerpt</a>
         <a href="https://github.com/joshSzep/the-house-without-walls">Source</a>
       </div>
@@ -832,16 +838,20 @@ EOF
 }
 
 require_file "${PDF_SCRIPT}"
+require_file "${EPUB_SCRIPT}"
 require_file "${CHAPTER_FILE}"
 require_file "${COVER_SOURCE}"
 
 bash "${PDF_SCRIPT}" >/dev/null
+bash "${EPUB_SCRIPT}" >/dev/null
 
 require_file "${PDF_SOURCE}"
+require_file "${EPUB_SOURCE}"
 
 mkdir -p "${WEBSITE_DIR}"
 cp "${COVER_SOURCE}" "${WEBSITE_COVER}"
 cp "${PDF_SOURCE}" "${WEBSITE_PDF}"
+cp "${EPUB_SOURCE}" "${WEBSITE_EPUB}"
 
 temp_dir="$(mktemp -d)"
 trap 'rm -rf "${temp_dir}"' EXIT
@@ -854,4 +864,5 @@ write_index "${visible_excerpt_file}" "${hidden_excerpt_file}"
 
 echo "Wrote ${INDEX_FILE}"
 echo "Copied ${WEBSITE_PDF}"
+echo "Copied ${WEBSITE_EPUB}"
 echo "Copied ${WEBSITE_COVER}"
